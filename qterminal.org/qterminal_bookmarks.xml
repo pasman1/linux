@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Some examples to demonstrate how to use QTerminal bookmarks.
+Adjust them to fit your needs. -->
+<qterminal>
+
+<command name="clear" value="clear"/>
+<command name="exit" value="exit"/>
+
+<group name="Apt">
+   <command name="update" value="sudo /usr/bin/apt update"/>
+   <command name="upgrade" value="sudo /usr/bin/apt upgrade -y --autoremove"/>
+   <command name="fix-broken" value="sudo /usr/bin/apt install --fix-broken"/>
+   <command name="clean" value="sudo /usr/bin/apt clean"/>
+</group>
+
+
+<group name="Clamav">
+   <command name="install" value="sudo apt install clamtk clamtk-gnome"/>
+   <command name="clamtk" value="clamtk"/>
+   <command name="clamscan $HOME" value="clamscan -ro --detect-pua=yes --remove=yes -l clam.log $HOME"/>
+</group>
+
+
+<group name="Gnome Disks">
+     <command name="install" value="sudo apt install -y gnome-disk-utility"/>
+     <command name="run" value="gnome-disks"/>
+</group>
+
+
+<group name="Gparted">
+     <command name="install" value="sudo apt install -y gparted"/>
+     <command name="run" value="gparted"/>
+</group>
+
+<group name="Make">
+   <command name="--" value="make"/>
+   <command name="menuconfig" value="make menuconfig"/>
+</group>
+
+<group name="Mc">
+   <command name="install" value="sudo apt install -y mc"/>
+   <command name="run" value="mc"/>
+</group>
+
+<group name="Ip">
+   <command name="ip a" value="ip a"/>
+   <command name="ip r" value="ip r"/>
+   <command name="ip l" value="ip l"/>
+</group>
+
+<group name="Nmap">
+   <command name="install" value="sudo apt install -y nmap"/>
+   <command name="192.168.0" value="nmap -sP 192.168.0.0/24"/>
+   <command name="192.168.1" value="nmap -sP 192.168.1.0/24"/>
+   <command name="176.169" value="nmap -sP 176.169.0.0/16"/>
+</group>
+
+<group name="Ping">
+   <command name="argon.local" value="ping -c 4 argon.local"/>
+   <command name="wdmycloud.local" value="ping -c 4 wdmycloud.local"/>
+   <command name="openwrt.local" value="ping -c 4 openwrt.local"/>
+</group>
+
+
+
+
+</qterminal>
